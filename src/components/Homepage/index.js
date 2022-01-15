@@ -8,14 +8,53 @@ import {
   Button,
   Image,
 } from "@chakra-ui/react";
+import { useState } from "react";
 import {
-  arrowButtonRight,
-  arrowRightCiclo,
+  ArrowButtonRight,
+  ArrowRightCiclo,
   ArrowUpName,
   arrowBoxRight,
+  ArrowBoxRight,
 } from "../UI/icons";
 
 export function Homepage() {
+  const [unitSecond, setUnitSecond] = useState(0);
+  const [tenSecond, setTenSecond] = useState(0);
+  const [unitMinute, setUnitMinute] = useState(0);
+  const [tenMinute, setTenMinute] = useState(0);
+
+  setTimeout(() => {
+    if (unitSecond === 9) {
+      setUnitSecond(0);
+    } else {
+      setUnitSecond(unitSecond + 1);
+    }
+  }, 1000);
+
+  setTimeout(() => {
+    if (tenSecond === 5) {
+      setTenSecond(0);
+    } else {
+      setTenSecond(tenSecond + 1);
+    }
+  }, 10050);
+
+  setTimeout(() => {
+    if (unitMinute === 9) {
+      setUnitMinute(0);
+    } else {
+      setUnitMinute(unitMinute + 1);
+    }
+  }, 60050);
+
+  setTimeout(() => {
+    if (tenMinute === 6) {
+      setTenMinute(0);
+    } else {
+      setTenMinute(tenMinute + 1);
+    }
+  }, 600050);
+
   return (
     <Flex
       width="100%"
@@ -51,16 +90,18 @@ export function Homepage() {
             bg="white"
             marginTop="56px"
             borderRadius="5px 0 0 5px"
+            position="relative"
           >
             <Text
               color="#2E384D"
               fontSize="120px"
               textAlign="center"
               position="absolute"
-              top="435px"
-              left="465px"
+              top="50%"
+              left="50%"
+              transform="translate(-50%, -52%)"
             >
-              2
+              {tenMinute}
             </Text>
           </Box>
           <Box
@@ -70,16 +111,18 @@ export function Homepage() {
             marginTop="56px"
             marginLeft="2px"
             borderRadius="0 5px 5px 0"
+            position="relative"
           >
             <Text
               color="#2E384D"
               fontSize="120px"
               textAlign="center"
               position="absolute"
-              top="435px"
-              left="553px"
+              top="50%"
+              left="50%"
+              transform="translate(-50%, -52%)"
             >
-              5
+              {unitMinute}
             </Text>
           </Box>
           <Box w="37px" h="144px" marginTop="56px" marginLeft="0">
@@ -108,16 +151,18 @@ export function Homepage() {
             marginTop="56px"
             marginLeft="0"
             borderRadius="5px 0 0 5px"
+            position="relative"
           >
             <Text
               color="#2E384D"
               fontSize="120px"
               textAlign="center"
               position="absolute"
-              top="435px"
-              left="678px"
+              top="50%"
+              left="50%"
+              transform="translate(-50%, -52%)"
             >
-              0
+              {tenSecond}
             </Text>
           </Box>
           <Box
@@ -127,23 +172,25 @@ export function Homepage() {
             marginTop="56px"
             marginLeft="2px"
             borderRadius="0 5px 5px 0"
+            position="relative"
           >
             <Text
               color="#2E384D"
               fontSize="120px"
               textAlign="center"
               position="absolute"
-              top="435px"
-              left="764"
+              top="50%"
+              left="50%"
+              transform="translate(-50%, -52%)"
             >
-              0
+              {unitSecond}
             </Text>
           </Box>
         </Flex>
 
         <Box>
           <Button
-            rightIcon={<Image src={arrowRightCiclo.src} />}
+            rightIcon={<ArrowRightCiclo />}
             marginTop="32px"
             textColor="white"
             w="100%"
@@ -164,6 +211,7 @@ export function Homepage() {
         marginRight="184px"
         marginLeft="100px"
         borderRadius="5px"
+        color="#666666"
       >
         <Box width="100%">
           <Text textAlign="center" marginTop="110px" fontSize="24px">
@@ -173,17 +221,9 @@ export function Homepage() {
             para receber um desafio
           </Text>
         </Box>
-        <Box w="50%">
-          {
-            <Image
-              src={arrowBoxRight.src}
-              width="70px"
-              h="70px"
-              marginTop="64px"
-              marginLeft="195px"
-            />
-          }
-        </Box>
+        <Flex w="100%" justifyContent="center" marginTop="64px !important">
+          <ArrowBoxRight />
+        </Flex>
         <Box width="100%">
           <Text textAlign="center" marginTop="30px" fontSize="16px">
             Avance de level completando

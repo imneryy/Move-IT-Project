@@ -93,7 +93,7 @@ export function ArrowUpName() {
   );
 }
 
-export function arrowRightCiclo() {
+export function ArrowRightCiclo() {
   return (
     <svg
       width="11"
@@ -107,7 +107,7 @@ export function arrowRightCiclo() {
   );
 }
 
-export function arrowBoxRight() {
+export function ArrowBoxRight() {
   return (
     <svg
       width="59"
