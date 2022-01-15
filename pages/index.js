@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Nery Lindo</title>
+        <title>Move It</title>
         <meta name="description" content="Neriolando Dantas da Costa Junior" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
