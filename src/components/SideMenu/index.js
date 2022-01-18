@@ -1,8 +1,15 @@
-import { Box, Stack, Image, Flex, Button } from "@chakra-ui/react";
+import { Box, Stack, Image, Flex, Button, Link } from "@chakra-ui/react";
+
+import React, { useEffect } from "react";
 import logoSideMenu from "../../assets/logo-sidemenu.svg";
 import { HomeIcon, LeaderBoardIcon } from "../UI/icons";
 
-export function SideMenu() {
+export function SideMenu({
+  ClickButton,
+  ClickButtonL,
+  setClickButton,
+  setClickButtonL,
+}) {
   return (
     <>
       <Stack
@@ -33,11 +40,19 @@ export function SideMenu() {
             position="absolute"
             bgColor="#5965E0"
             width="5px"
-            height="100%"
+            height={ClickButton ? "100%" : "0"}
+            transition="height 0.3s"
             left="0"
             borderRadius="0 15px 15px 0"
           ></Flex>
-          <HomeIcon />
+          <Link
+            onClick={() => {
+              setClickButton(true);
+              setClickButtonL(false);
+            }}
+          >
+            <HomeIcon isOpen={ClickButton} />
+          </Link>
         </Flex>
         <Flex
           position="relative"
@@ -51,11 +66,19 @@ export function SideMenu() {
             position="absolute"
             bgColor="#5965E0"
             width="5px"
-            height="100%"
+            height={ClickButtonL ? "100%" : "0"}
+            transition="height 0.3s"
             left="0"
             borderRadius="0 15px 15px 0"
           ></Flex>
-          <LeaderBoardIcon />
+          <Link
+            onClick={() => {
+              setClickButtonL(true);
+              setClickButton(false);
+            }}
+          >
+            <LeaderBoardIcon isOpen={ClickButtonL} />
+          </Link>
         </Flex>
       </Stack>
     </>

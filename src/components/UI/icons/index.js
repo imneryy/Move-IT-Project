@@ -1,4 +1,4 @@
-export function HomeIcon() {
+export function HomeIcon({ isOpen }) {
   return (
     <svg
       width="28"
@@ -9,23 +9,23 @@ export function HomeIcon() {
     >
       <path
         d="M2 11L14 1.66663L26 11V25.6666C26 26.3739 25.719 27.0522 25.219 27.5522C24.7189 28.0523 24.0406 28.3333 23.3333 28.3333H4.66667C3.95942 28.3333 3.28115 28.0523 2.78105 27.5522C2.28095 27.0522 2 26.3739 2 25.6666V11Z"
-        stroke="#5965E0"
-        stroke-width="2.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        stroke={isOpen ? "#5965E0" : "#666666"}
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M10 28.3333V15H18V28.3333"
-        stroke="#5965E0"
-        stroke-width="2.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        stroke={isOpen ? "#5965E0" : "#666666"}
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
 }
 
-export function LeaderBoardIcon() {
+export function LeaderBoardIcon({ isOpen }) {
   return (
     <svg
       width="22"
@@ -36,17 +36,17 @@ export function LeaderBoardIcon() {
     >
       <path
         d="M11.0001 19.9999C16.1547 19.9999 20.3334 15.8212 20.3334 10.6666C20.3334 5.51193 16.1547 1.33325 11.0001 1.33325C5.84542 1.33325 1.66675 5.51193 1.66675 10.6666C1.66675 15.8212 5.84542 19.9999 11.0001 19.9999Z"
-        stroke="#5965E0"
-        stroke-width="2.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        stroke={isOpen ? "#5965E0" : "#666666"}
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M5.94659 18.5199L4.33325 30.6666L10.9999 26.6666L17.6666 30.6666L16.0533 18.5066"
-        stroke="#5965E0"
-        stroke-width="2.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        stroke={isOpen ? "#5965E0" : "#666666"}
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
