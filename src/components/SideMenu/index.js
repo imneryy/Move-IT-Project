@@ -13,7 +13,8 @@ export function SideMenu({
   return (
     <>
       <Stack
-        position="relative"
+        position="sticky"
+        top="0"
         justifyContent="center"
         bg="linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)"
         height="100vh"

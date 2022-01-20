@@ -1,3 +1,6 @@
+import { Image } from "@chakra-ui/react";
+import FotoDiego from "../../../assets/FotoDiego.png";
+
 export function HomeIcon({ isOpen }) {
   return (
     <svg
@@ -170,4 +173,7 @@ export function ArrowBoxRight() {
       />
     </svg>
   );
+}
+export function FotoDiegoFernandes({ ...rest }) {
+  return <Image src={FotoDiego.src} w="64px" {...rest} />;
 }
