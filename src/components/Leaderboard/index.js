@@ -4,21 +4,29 @@ import { LbItemsArray } from "./lb-items-array";
 
 export function Leaderboard() {
   return (
-    <Flex flex="auto" alignItems="center" flexDirection="column">
+    <Flex
+      flex="auto"
+      alignItems="center"
+      flexDirection="column"
+      fontFamily="Inter, sans-serif"
+    >
       <Stack w="960px" h="100%">
         <Text
-          color="black"
+          color="#2E384D"
           fontWeight="600px"
           fontSize="36px"
           textAlign="start"
           marginTop="40px"
+          fontWeight="600"
         >
           Leaderboard
         </Text>
         <Flex w="100%">
           <Text
+            color="#666666"
+            fontFamily="Inter, sans-serif"
+            fontWeight="700"
             fontSize="14px"
-            fontWeight="bold"
             marginTop="40px"
             marginBottom="24px"
           >
@@ -26,7 +34,9 @@ export function Leaderboard() {
           </Text>
           <Text
             fontSize="14px"
-            fontWeight="bold"
+            color="#666666"
+            fontFamily="Inter, sans-serif"
+            fontWeight="700"
             marginLeft="35px"
             marginTop="40px"
             marginBottom="24px"
@@ -35,7 +45,9 @@ export function Leaderboard() {
           </Text>
           <Text
             fontSize="14px"
-            fontWeight="bold"
+            color="#666666"
+            fontFamily="Inter, sans-serif"
+            fontWeight="700"
             marginTop="40px"
             marginBottom="24px"
             marginLeft="467px"
@@ -44,7 +56,9 @@ export function Leaderboard() {
           </Text>
           <Text
             fontSize="14px"
-            fontWeight="bold"
+            color="#666666"
+            fontFamily="Inter, sans-serif"
+            fontWeight="700"
             marginTop="40px"
             marginBottom="24px"
             marginLeft="118px"
@@ -62,7 +76,11 @@ export function Leaderboard() {
                 alignItems="center"
                 justifyContent="space-around"
               >
-                <Text fontSize="24px" fontWeight="500">
+                <Text
+                  fontSize="24px"
+                  fontFamily="Inter, sans-serif"
+                  fontWeight="500"
+                >
                   {item.position}
                 </Text>
               </Flex>
@@ -75,10 +93,18 @@ export function Leaderboard() {
                 <Flex alignItems="center">
                   {item.image}
                   <Box marginLeft="17px">
-                    <Text>{item.name}</Text>
+                    <Text fontFamily="Inter, sans-serif" fontWeight="600">
+                      {item.name}
+                    </Text>
                     <Flex alignItems="center">
                       <ArrowUpName />
-                      <Text marginLeft="9px">Level {item.level}</Text>
+                      <Text
+                        marginLeft="9px"
+                        fontFamily="Inter, sans-serif"
+                        fontWeight="400"
+                      >
+                        Level {item.level}
+                      </Text>
                     </Flex>
                   </Box>
                 </Flex>
@@ -89,8 +115,13 @@ export function Leaderboard() {
                     gridTemplateColumns="182px"
                     alignItems="center"
                   >
-                    <Text>
-                      <Text color="#5965E0" as="spam">
+                    <Text fontFamily="Inter, sans-serif" fontWeight="400">
+                      <Text
+                        color="#5965E0"
+                        as="spam"
+                        fontFamily="Inter, sans-serif"
+                        fontWeight="500"
+                      >
                         {item.desafios}
                       </Text>{" "}
                       completados
@@ -102,8 +133,14 @@ export function Leaderboard() {
                     gridTemplateColumns="149px"
                     alignItems="center"
                   >
-                    <Text>
-                      <Text alignItems="start" color="#5965E0" as="spam">
+                    <Text fontFamily="Inter, sans-serif" fontWeight="400">
+                      <Text
+                        alignItems="start"
+                        color="#5965E0"
+                        as="spam"
+                        fontFamily="Inter, sans-serif"
+                        fontWeight="400"
+                      >
                         {item.experiência}
                       </Text>{" "}
                       xp

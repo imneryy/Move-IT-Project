@@ -65,10 +65,21 @@ export function Homepage() {
       >
         <Stack width="390px" marginTop="200px" marginLeft="184px">
           <Box>
-            <Text fontSize="24px">Neriolando Junior</Text>
+            <Text
+              fontSize="24px"
+              fontFamily="Inter, sans-serif"
+              fontWeight="600"
+            >
+              Neriolando Junior
+            </Text>
             <Flex marginTop="9px" alignItems="center">
               <ArrowUpName />
-              <Text fontSize="16px" marginLeft="9px">
+              <Text
+                fontSize="16px"
+                marginLeft="9px"
+                fontFamily="Inter, sans-serif"
+                fontWeight="normal"
+              >
                 Level 1
               </Text>
             </Flex>
@@ -80,8 +91,20 @@ export function Homepage() {
               height="44px"
               borderBottom="1px"
             >
-              <Text fontSize="18px">Desafios completados</Text>
-              <Text fontSize="18px">00</Text>
+              <Text
+                fontSize="18px"
+                fontFamily="Inter, sans-serif"
+                fontWeight="500"
+              >
+                Desafios completados
+              </Text>
+              <Text
+                fontSize="18px"
+                fontFamily="Inter, sans-serif"
+                fontWeight="500"
+              >
+                00
+              </Text>
             </Flex>
           </Box>
           <Flex w="100%">
@@ -96,6 +119,10 @@ export function Homepage() {
               <Text
                 color="#2E384D"
                 fontSize="120px"
+                fontFamily="
+                Rajdhani, sans-serif"
+                fontStyle="normal"
+                fontWeight="600"
                 textAlign="center"
                 position="absolute"
                 top="50%"
@@ -117,6 +144,9 @@ export function Homepage() {
               <Text
                 color="#2E384D"
                 fontSize="120px"
+                fontFamily="
+                Rajdhani, sans-serif"
+                fontWeight="600"
                 textAlign="center"
                 position="absolute"
                 top="50%"
@@ -129,20 +159,20 @@ export function Homepage() {
             <Box w="37px" h="144px" marginTop="56px" marginLeft="0">
               <Stack alignItems="center">
                 <Box
-                  w="15px"
-                  h="23px"
+                  w="13px"
+                  h="20px"
                   bg="#2E384D"
-                  borderRadius="5px"
-                  marginTop="36px"
+                  borderRadius="3px"
+                  marginTop="35px"
                 ></Box>
                 <Box
-                  w="15px"
-                  h="15px"
+                  w="18px"
+                  h="18px"
                   marginTop="0"
                   marginBottom="0"
                   borderRadius="5px"
                 ></Box>
-                <Box w="15px" h="23px" bg="#2E384D" borderRadius="5px"></Box>
+                <Box w="13px" h="20px" bg="#2E384D" borderRadius="3px"></Box>
               </Stack>
             </Box>
             <Box
@@ -157,6 +187,9 @@ export function Homepage() {
               <Text
                 color="#2E384D"
                 fontSize="120px"
+                fontFamily="
+                Rajdhani, sans-serif"
+                fontWeight="600"
                 textAlign="center"
                 position="absolute"
                 top="50%"
@@ -178,6 +211,9 @@ export function Homepage() {
               <Text
                 color="#2E384D"
                 fontSize="120px"
+                fontFamily="
+                Rajdhani, sans-serif"
+                fontWeight="600"
                 textAlign="center"
                 position="absolute"
                 top="50%"
@@ -189,8 +225,10 @@ export function Homepage() {
             </Box>
           </Flex>
 
-          <Box>
+          <Flex>
             <Button
+              fontFamily="Inter, sans-serif"
+              fontWeight="600"
               rightIcon={<ArrowRightCiclo />}
               marginTop="32px"
               textColor="white"
@@ -202,7 +240,7 @@ export function Homepage() {
             >
               Iniciar um ciclo
             </Button>
-          </Box>
+          </Flex>
         </Stack>
         <Stack
           w="468px"
@@ -214,7 +252,7 @@ export function Homepage() {
           borderRadius="5px"
           color="#666666"
         >
-          <Box width="100%">
+          <Box width="100%" fontFamily="Inter, sans-serif" fontWeight="500">
             <Text textAlign="center" marginTop="110px" fontSize="24px">
               Inicie um ciclo
             </Text>
@@ -225,7 +263,7 @@ export function Homepage() {
           <Flex w="100%" justifyContent="center" marginTop="64px !important">
             <ArrowBoxRight />
           </Flex>
-          <Box width="100%">
+          <Box width="100%" fontFamily="Inter, sans-serif" fontWeight="400">
             <Text textAlign="center" marginTop="30px" fontSize="16px">
               Avance de level completando
             </Text>

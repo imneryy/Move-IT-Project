@@ -33,6 +33,8 @@ export default function Page() {
             fontSize="36px"
             color="white"
             marginBottom="50px"
+            fontFamily="Inter, sans-serif"
+            fontWeight="600"
           >
             Bem-vindo
           </Text>
@@ -49,6 +51,8 @@ export default function Page() {
                 type="text"
                 color="white"
                 placeholder="Digite seu username"
+                fontFamily="Inter, sans-serif"
+                fontWeight="500"
               />
               <InputRightElement width="80px" h="80px" p="0">
                 <Button
